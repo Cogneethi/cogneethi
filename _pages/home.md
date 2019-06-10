@@ -3,7 +3,7 @@ layout: splash
 permalink: /
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/texture_3.jpg
+  overlay_image: /assets/images/texture_3_1.jpg
 excerpt: >
   Machine Learning Tutorials.<br />
 ---
