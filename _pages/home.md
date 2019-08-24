@@ -66,11 +66,11 @@ But, in case, you are new to ML, don't worry. What I have done is to give you ju
 
 If you are interested in the basics of Machine Learning, you can go through these:
 
-[Michael Nielsen’s Tutorial: (recommended)](http://neuralnetworksanddeeplearning.com/chap1.html){:target="_blank"}
+[Michael Nielsen's Tutorial: (recommended)](http://neuralnetworksanddeeplearning.com/chap1.html){:target="_blank"}
 
 [Andrew Ng's ML playlist: (recommended)](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Ec-XTbcX1uRg2_u4xOEky0){:target="_blank"}
 
-[Stanford Univ’s Notes: (recommended)](http://cs231n.github.io/neural-networks-1/){:target="_blank"}
+[Stanford Univ's Notes: (recommended)](http://cs231n.github.io/neural-networks-1/){:target="_blank"}
 
 [Good short intro: (optional)](https://www.youtube.com/watch?v=FmpDIaiMIeA){:target="_blank"}
 
