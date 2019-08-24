@@ -59,6 +59,23 @@ Last but not the least, I have also included some additional materials in case y
 
 In case, you are familiar with the above topics, feel free to skip them and take up the rest of the course.
 
+### Prerequisites
+In this course, I did not go into the basics of Machine Learning. I assume that you already are aware of the basic concepts.
+
+But, in case, you are new to ML, don't worry. What I have done is to give you just enough overview about ML, so that you can continue to the course on Object Detection, without any issues.
+
+If you are interested in the basics of Machine Learning, you can go through these:
+
+[Michael Nielsen’s Tutorial: (recommended)](http://neuralnetworksanddeeplearning.com/chap1.html){:target="_blank"}
+
+[Andrew Ng's ML playlist: (recommended)](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Ec-XTbcX1uRg2_u4xOEky0){:target="_blank"}
+
+[Stanford Univ’s Notes: (recommended)](http://cs231n.github.io/neural-networks-1/){:target="_blank"}
+
+[Good short intro: (optional)](https://www.youtube.com/watch?v=FmpDIaiMIeA){:target="_blank"}
+
+[Long intro with TensorFlow & MNIST: (optional)](https://www.youtube.com/watch?v=vq2nnJ4g6N0){:target="_blank"}
+
 ## Future Plans
 My next target is to cover a. Segmentation, b. Action Recognition etc.
 
