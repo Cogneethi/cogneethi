@@ -15,11 +15,11 @@ title                    : "Cogneethi"
 title_separator          : "-"
 name                     : &name "Nikhil Tirumala" # &name is a YAML anchor which can be *referenced later
 description              : &description "Tutorirals on Machine Learning."
-url                      : https://nikhiltiru.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://cogneethi.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "nikhiltiru/evaluation_metrics"
+repository               : "Cogneethi/cogneethi"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "/assets/images/favicon-32x32.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -58,6 +58,7 @@ reCaptcha:
   siteKey                : # "6LdRBykTAAAAAFB46MnIu6ixuxwu9W1ihFF8G60Q"
   secret                 : # "PznnZGu3P6eTHRPLORniSq+J61YEf+A9zmColXDM5icqF49gbunH51B8+h+i2IvewpuxtA9TFoK68TuhUp/X3YKmmqhXasegHYabY50fqF9nJh9npWNhvITdkQHeaOqnFXUIwxfiEeUt49Yoa2waRR7a5LdRAP3SVM8hz0KIBT4="
 
+github                   : [metadata]
 atom_feed:
   path                   : # blank (default) uses feed.xml
 
@@ -88,7 +89,7 @@ social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
-    - "https://twitter.com/cogneeth1"
+    - "https://twitter.com/cogneethi"
 
 # Analytics
 # analytics:
@@ -102,15 +103,15 @@ social:
 author:
   name             : *name # *name is a YAML reference pointing to the &anchor earlier
   avatar           : "/assets/images/nikhil_tirumala.jpg"
-  bio              : "Yet another Machine Learning developer."
+  bio              : "Machine Learning Engineer"
   location         : "Bengaluru, India"
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/cogneethi"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/nikhiltiru"
+    # - label: "GitHub"
+    #   icon: "fab fa-fw fa-github"
+    #   url: "https://github.com/nikhiltiru"
 
 
 # Site Footer
@@ -121,7 +122,7 @@ footer:
       url: "https://twitter.com/cogneethi"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/nikhiltiru"
+      url: "https://github.com/Cogneethi"
 
 
 # Reading Files
