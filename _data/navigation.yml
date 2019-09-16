@@ -8,3 +8,12 @@ main:
     url: /donate/
   - title: "Contact"
     url: /contact/
+
+# documentation links
+evodn:
+  - title: Object Detection
+    children:
+      - title: "Classification, Localization & Detection"
+        url: /evodn/object_detection_intro/
+      - title: "Object Detection using Overfeat"
+        url: /evodn/object_detection_overfeat/

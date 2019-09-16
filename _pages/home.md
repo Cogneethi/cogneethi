@@ -59,6 +59,8 @@ Last but not the least, I have also included some additional materials in case y
 
 In case, you are familiar with the above topics, feel free to skip them and take up the rest of the course.
 
+A brief version of this tutorial is available as a blog [here](/evodn/object_detection_intro/)
+
 ### Prerequisites
 In this course, I did not go into the basics of Machine Learning. I assume that you already are aware of the basic concepts.
 
