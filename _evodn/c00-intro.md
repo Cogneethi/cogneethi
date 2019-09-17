@@ -5,7 +5,7 @@ excerpt: "Differences in Image Classification, Object Localization & Object Dete
 last_modified_at: 2019-04-18T15:53:52-04:00
 redirect_from:
   - /theme-setup/
-<!-- toc: true -->
+toc: true
 header:
   image: /assets/images/banner_evolution.jpg
 classes: wide  
@@ -40,11 +40,17 @@ Since we already know how to do **Image Classification**, let's see if we can us
 </figure>
 
 ### Problem - Need 4 outputs per class
-![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/evodn/intro_bbox.png){: .align-left}But for Localization, to get the bounding box, we need 4 outputs per class. These 4 outputs would correspond to x1,y1,x2,y2 co-ordinates of the bounding box. Or, they can be the mid point of the box (x0, y0) and the height and width (h,w) of the box. Either way, we would be needing 4 values.
+But for Localization, to get the bounding box, we need 4 outputs per class.
 
-### Solution - Modify last layer
+<figure>
+  <a href="/assets/images/evodn/intro_bbox.png"><img src="/assets/images/evodn/intro_bbox.png"></a>
+</figure>
+
+These 4 outputs would correspond to x1,y1,x2,y2 co-ordinates of the bounding box. Or, they can be the mid point of the box (x0, y0) and the height and width (h,w) of the box. Either way, we would be needing 4 values.
+
 *So, how shall we do it?*
 
+### Solution - Modify last layer
 In reality, it is not so complicated. We just need to modify the last Fully Connected layer of the network to output 4 values for each class instead of 1. *That's it. Conceptually it is as simple as that.*
 
 And since, here we are interested in the absolute values of the co-ordinates and not the probabilities, we would not be needing the Softmax layer at the end.
@@ -72,13 +78,13 @@ On the same lines, can we extend the Localization network to locate more than on
 Note: The Convolution Networks like AlexNet, VGGNet etc need input images to be of fixed size like 224x224.
 {: .notice}
 
-#### Single Object
+### Single Object
 <figure>
   <a href="/assets/images/evodn/intro_resize_1.jpg"><img src="/assets/images/evodn/intro_resize_1.jpg"></a>
 </figure>
 If there is only one object in an image, there is no problem. We can just resize the image to the required dimension and use the same localization network.
 
-#### Two Objects
+### Two Objects
 How do we handle the case of 2 objects?
 <figure>
   <a href="/assets/images/evodn/intro_resize_2.jpg"><img src="/assets/images/evodn/intro_resize_2.jpg"></a>
@@ -91,8 +97,9 @@ One simple hack would be to just split the image into 2, so that the 2 objects a
 </figure>
 While the above approach would work, this would not be a generic solution. Since there can be any number of objects in the image and neither do I know the number of objects, nor their locations before hand.
 
-### Solution - Sliding Window
 So, how can we solve this problem?
+
+### Solution - Sliding Window
 Since we neither know the number of objects nor their location, the only option left is to scan all possible locations in an image.
 
 To do this, we can take crops at all possible locations in the image and feed it to the localization network.
@@ -117,10 +124,9 @@ As you can see in the image below, the sliding window size (red box) is insuffic
 <figure>
   <a href="/assets/images/evodn/intro_pyramid.jpg"><img src="/assets/images/evodn/intro_pyramid.jpg"></a>
 </figure>
-
-### Solution - Image Pyramid
 *So, what is the solution to this problem?*
 
+### Solution - Image Pyramid
 Either I have to use Sliding windows of different sizes or resize the main image itself, keeping the Sliding Window size constant. Usually the 2nd approach is taken.
 
 Experimentally, it is found that scaling the image to six different sizes would be good enough to locate most of the objects.

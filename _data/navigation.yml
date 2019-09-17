@@ -13,7 +13,9 @@ main:
 evodn:
   - title: Object Detection
     children:
-      - title: "Classification, Localization & Detection"
+      - title: "0. Localization & Detection"
         url: /evodn/object_detection_intro/
-      - title: "Object Detection using Overfeat"
+      - title: "1. Overfeat"
         url: /evodn/object_detection_overfeat/
+      - title: "x. Credits"
+        url: /evodn/credits/

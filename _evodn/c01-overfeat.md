@@ -5,15 +5,18 @@ excerpt: "Object Detection using Overfeat Network"
 last_modified_at: 2019-04-18T15:53:52-04:00
 redirect_from:
   - /theme-setup/
-<!-- toc: true -->
+toc: true
 header:
   image: /assets/images/banner_evolution.jpg
-<!-- classes: wide -->
+classes: wide
 ---
 
-This is part 2 of multi-part series on Object Detection. See [Part 1](/evodn/object_detection_intro/).
-A *detailed* tutorial is available in [YouTube](https://www.youtube.com/playlist?list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S){:target="_blank"}.
-The same topic is covered in *brief* in this blog.
+This is part 1 of multi-part series on Object Detection. See [Part 0](/evodn/object_detection_intro/).
+
+**A *detailed* tutorial is available in [YouTube](https://www.youtube.com/playlist?list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S){:target="_blank"}. The same topic is covered in *brief* in this blog.**
+{: .notice--danger}
+
+## ConvNet's input size constraints
 
 ### Problem - ConvNet's input size constraints
 The problem we discussed in the previous part was that, using the Sliding window technique and taking the crop of the image at different locations, I am ending up with too many inputs to my Localization network.
@@ -37,6 +40,7 @@ So, this is where the restriction is coming from.
 </figure>
 
 **See detailed discussion [here](https://www.youtube.com/watch?v=Mb79KKdluYI&list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S&index=50){:target="_blank"}**
+{: .notice--danger}
 
 ### Solution - FC Layer implemented as Convolution operation.
 Now that we have understood the root cause of the problem, how do we fix this?
@@ -50,11 +54,14 @@ Instead, what you can do is, take the Pool layer output without flattening. This
 <figure>
   <a href="/assets/images/evodn/detection_fc_as_conv.jpg"><img src="/assets/images/evodn/detection_fc_as_conv.jpg"></a>
 </figure>
-See [this](https://youtu.be/p50xXzEZ5FE).
+**See detailed discussion [here](https://www.youtube.com/watch?v=p50xXzEZ5FE&list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S&index=42){:target="_blank"}**
+{: .notice--danger}
 
 This way, we can implement the Fully Connected layer operation as a convolution operation.
 
 Since convolution operations have no size constraint, this will remove the fixed size restriction.
+
+## Receptive Field & Spatial Output
 
 ###  Problem - I get more outputs than I need
 But if you observe the output of this operation, you will see that, you will end up with different sized outputs.
@@ -108,11 +115,12 @@ Not only is the Convolution Operation in the FC layers convenient, it is also ef
 
 This is because, using Sliding Window technique avoids repeated computations, which we would have incurred if we had taken the image crops.
 
-Below figure shows a 10x10 image in the middle row. Lets say, we take 2 crops - top left and bottom right and do the convolutions separately. In the middle row, the convolution operation is applied to the entire image at once. We can see that, the outputs are necessarily the same. The top and bottom rows are just doing repeated computations in the overlap region (orange region) with no change in output.
+Below figure shows a 10x10 image in the middle row. Lets say, we take 2 8x8 crops - top left and bottom right and do the convolutions separately. In the middle row, the convolution operation is applied to the entire image at once. We can see that, the outputs are necessarily the same. The top and bottom rows are just doing repeated computations in the overlap region (orange region) with no change in output.
 <figure>
   <a href="/assets/images/evodn/detection_sliding_window_efficiency.jpg"><img src="/assets/images/evodn/detection_sliding_window_efficiency.jpg"></a>
 </figure>
 
+## Overfeat
 
 ### Overfeat Intuition
 By putting all the concepts we have learnt till now, we will be able to understand Overfeat.
@@ -120,6 +128,7 @@ By converting the FC layers into convolution operation, we have removed the fixe
 1. I can use the same localization network, without using the Sliding Window crops at different locations.
 2. Since there are no input size constraint, I will be able to use the Image pyramids.
 3. Since, I am using Image Pyramids, I will get the Spatial Output, which will give me detections at different locations of the image.
+4. Since the entire network is using Convolution operations, it is way more efficient than taking crops.
 
 This the intuition behind OverFeat Network.
 
@@ -128,6 +137,7 @@ This Network won the ImageNet 2013 localization task (ILSVRC2013) and obtained v
 [OverFeat: Integrated Recognition, Localization and Detection using Convolutional Networks – Sermanet et al](https://arxiv.org/abs/1312.6229){:target="_blank"}
 
 **See detailed discussion [here](https://www.youtube.com/watch?v=t5PHp8uSMKo&list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S&index=53){:target="_blank"}**
+{: .notice--danger}
 
 ### Overfeat Classification Network
 This is the Overfeat Classification Network. It uses a modified AlexNet architecture for Convolution operations.
@@ -155,6 +165,8 @@ In total, we need 6x3=18 filters.
 <figure>
   <a href="/assets/images/evodn/detection_fm.gif"><img src="/assets/images/evodn/detection_fm.gif"></a>
 </figure>
+Detailed discussion on ConvNet Depth is here:
+{% include video id="0r80YkfTGDk" provider="youtube" %}
 
 Similarly, to get a Feature Map output of depth 4096, at the 1st FC layer, we need 256*4096 filters. And each filter is of size 5x5. 256 - Since, the depth of AlexNet Conv layers is  256.
 
@@ -171,11 +183,13 @@ So, in total we have 21 classes. To keep it generic, let us call this C.
 Accordingly, the depth of last FC layer will be 4096*C and each filter will be of 1x1.
 
 **See detailed discussion [here](https://www.youtube.com/watch?v=JKTzkcaWfuk&list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S&index=55){:target="_blank"}**
+{: .notice--danger}
 
 ### Overfeat Detection Network
 For Object Detection, Overfeat used an Image Pyramid of 6 different scales as shown below.
 Accordingly, the sizes of the Conv Feature Maps and the output Feature Maps change.
-It is here, that we get the Spatial Output.
+
+It is in the Detection Network, that we get the Spatial Output. Overfeat does not use Image Pyramids for Classification.
 
 <figure>
   <a href="/assets/images/evodn/detection_overfeata_detect.jpg"><img src="/assets/images/evodn/detection_overfeata_detect.jpg"></a>
@@ -200,8 +214,11 @@ Here, we can see (not to scale), the Receptive field of different pixels of the 
   <a href="/assets/images/evodn/detection_overfeat_spatial_output.jpg"><img src="/assets/images/evodn/detection_overfeat_spatial_output.jpg"></a>
 </figure>
 
+## 1x1 Convolution, Model Size, Effective Stride
+
 ### 1x1 Convolution and Model Size of ConvNet
-For a detailed discussion on calculating Model size of ConvNet, see [this video](https://www.youtube.com/watch?v=yLFe6TFE8L8&list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S&index=58){:target="_blank"}.
+**See detailed discussion on calculating Model size of ConvNet [here](https://www.youtube.com/watch?v=yLFe6TFE8L8&list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S&index=58){:target="_blank"}.**
+{: .notice--danger}
 
 In the below image, we can see the size of FC layers when we use 1x1 Convolutions. It comes to around 45MB.
 <figure>
@@ -266,6 +283,9 @@ The modified Spatial Output sizes are shown below. Instead of 1x1xC, you will ge
 </figure>
 
 **See detailed discussion [here](https://www.youtube.com/watch?v=50-PhoCJEOk&list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S&index=54){:target="_blank"}**
+{: .notice--danger}
+
+## Post processing at Output side
 
 ### Confidence Score thresholding
 Once we get the Spatial output, we will have multiple detections, each with different confidence scores. But the detections with low confidence scores will mostly be of background regions of the image and not that of any object. So we usually set a threshold of say 50% or 70% and eliminate all the bounding boxes that have lower scores than this.
@@ -299,7 +319,7 @@ But this strategy may not work in all cases. Especially when the objects are clo
 
 So, if you pick, say the Green box and eliminate all the overlapping boxes, you will end up eliminating boxes even for Sachin. That way, you will miss detecting Sachin.
 
-So instead, the sane thing to do is to only eliminate only boxes that have a significant overlap with the selected box.
+So instead, the sane thing to do is to only eliminate boxes that have a significant overlap with the selected box.
 
 But, mathematically, how do you measure the amount of overlap? For this, we have a measure called Intersection over Union (IoU).
 
@@ -318,10 +338,15 @@ This will be the result after applying NMS.
   <a href="/assets/images/evodn/detection_iou_nms_1.jpg"><img src="/assets/images/evodn/detection_iou_nms_1.jpg"></a>
 </figure>
 
-**See detailed discussion [here](https://www.youtube.com/watch?v=Uzg4eicmpO4&list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S&index=57){:target="_blank"}**
+**See detailed discussion on NMS here**
+{% include video id="Uzg4eicmpO4" provider="youtube" %}
+<!-- **See detailed discussion [here](https://www.youtube.com/watch?v=Uzg4eicmpO4&list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S&index=57){:target="_blank"}**
+{: .notice--danger} -->
 
-### In Summary
-We use:
+## Summary
+
+### Pre and Post processing
+In general, we use:
 1. Sliding Windows to identify objects at different *Locations*
 2. Image Pyramid to identify objects of different *sizes*
 
@@ -346,4 +371,7 @@ This completes the discussion on one of the first Object Detection Networks, Ove
 
 These concepts are pretty generic and you will come across them in many other papers.
 
-In the next part (probably next week or so), we will learn about RCNN. Or in the meantime, you can watch [this](https://www.youtube.com/watch?v=dtIZVJAcLxE&list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S&index=59){:target="_blank"}
+In the next part (probably next week or so), we will learn about RCNN.
+
+**In the meantime, you can watch [this](https://www.youtube.com/watch?v=dtIZVJAcLxE&list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S&index=59){:target="_blank"}.**
+{: .notice--danger}
