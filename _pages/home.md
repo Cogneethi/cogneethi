@@ -18,7 +18,13 @@ My intention is to pick a domain and cover all the important topics in that doma
 So, here I am. The first topic I choose was Object Detection. This is the first ever tutorial I have ever created in my life. I don't know how it has come out. And I am not sure if you all will like this style of teaching. Whatever it is, please let me know your [thoughts](/contact). So that, I will know what worked, what didn't and will either help me to improve or completely discontinue my (mis)adventure :)
 
 ## 1. Evolution of Object Detection Networks
-Topic on Object Detection. You can find the tutorials [here](https://www.youtube.com/playlist?list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S){:target="_blank"}.
+Topic on Object Detection.
+
+**You can find the detailed video tutorials on  [YouTube](https://www.youtube.com/playlist?list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S){:target="_blank"}.**
+{: .notice--info}
+
+**A brief version of this tutorial is available as a blog [here](/evodn/object_detection_intro/){:target="_blank"}.**
+{: .notice--primary}
 
 In this course, I have covered some of the important papers in this field like:
 * **Dalal & Triggs Detector, which uses Histogram of Oriented Gradients (HOG)**

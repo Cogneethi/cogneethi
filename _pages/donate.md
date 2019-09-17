@@ -13,7 +13,8 @@ If you like this tutorial, please consider supporting me via any of:
   </a>
 
 - Patreon [https://www.patreon.com/cogneethi](https://www.patreon.com/cogneethi){:target="_blank"}
-<a href="https://www.patreon.com/bePatron?u=23474325" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+
+  <a href="https://www.patreon.com/bePatron?u=23474325" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
 
 
 - UPI (India only): **cogneethi@upi**
