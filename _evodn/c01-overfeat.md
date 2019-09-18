@@ -35,6 +35,8 @@ And when you are taking dot products, the size of input and size of the filter s
 
 So, this is where the restriction is coming from.
 
+Note: In this figure, assume each square is a pixel. You have 'white' pixels in 1st 2 columns, followed by 'black' and then 'white' pixels. The surrounding 'zeros' are for padding during convolution. The top row has a 6x6 image input and the 2nd row has 8x8 image input with the same Network.
+{: .notice}
 <figure>
   <a href="/assets/images/evodn/detection_size_constraint.jpg"><img src="/assets/images/evodn/detection_size_constraint.jpg"></a>
 </figure>
