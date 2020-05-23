@@ -24,7 +24,7 @@ LinkedIn: https://www.linkedin.com/in/nikhil-tirumala/
 Email: nikhil.tiru@gmail.com
 
 
-I have made few tutorial videos on topics related to ML. As of now, I have started with [Object Detection](https://www.youtube.com/playlist?list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S){:target="_blank"}.
+I have created tutorial videos on [Object Detection](https://www.youtube.com/playlist?list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S){:target="_blank"}.
 
 ### Light a candle
 If you found this tutorial useful, help me reach out to more people. You can do this by

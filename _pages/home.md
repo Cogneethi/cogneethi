@@ -8,7 +8,8 @@ excerpt: >
   Machine Learning Tutorials.<br />
 ---
 
-Hi, I am Nikhil, a Machine Learning Engineer. I am currently Freelancing.
+Hi, I am Nikhil, a Machine Learning Engineer.
+I am currently Freelancing.
 Know more [about me](/about).
 
 I am in the process of getting a deeper understanding on Machine Learning.
