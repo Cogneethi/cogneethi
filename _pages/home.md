@@ -8,14 +8,16 @@ excerpt: >
   Machine Learning Tutorials.<br />
 ---
 
-Hi, I am Nikhil, a Machine Learning Engineer. I am currently creating tutorials on topics related to Machine Learning.
-I have started with [Object Detection](https://www.youtube.com/playlist?list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S){:target="_blank"}. I will be creating more tutorials if there is considerable response to this course.
+Hi, I am Nikhil, a Machine Learning Engineer. I am currently Freelancing.
+Know more [about me](/about).
+
+I am in the process of getting a deeper understanding on Machine Learning.
+I have created video tutorials on topics related to Machine Learning.
+The first one is on [Object Detection](https://www.youtube.com/playlist?list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S){:target="_blank"}. There are more than 1000 subscirbers currently. I will be creating more during my spare time.
 
 There are many tutorials online that cover topics more broadly. For example, they might teach you CNNs, RNNs, GANs, RL etc. I would consider these to be the *meta concepts* or the basic building blocks with which you can build higher level stuff. These tutorials are already good and there is no point repeating them.
 
 My intention is to pick a domain and cover all the important topics in that domain. Irrespective of what *meta concept* they might be using.
-
-So, here I am. The first topic I choose was Object Detection. This is the first ever tutorial I have ever created in my life. I don't know how it has come out. And I am not sure if you all will like this style of teaching. Whatever it is, please let me know your [thoughts](/contact). So that, I will know what worked, what didn't and will either help me to improve or completely discontinue my (mis)adventure :)
 
 ## 1. Evolution of Object Detection Networks
 Topic on Object Detection.
@@ -78,14 +80,17 @@ If you are interested in the basics of Machine Learning, you can go through thes
 
 [Stanford Univ's Notes: (recommended)](http://cs231n.github.io/neural-networks-1/){:target="_blank"}
 
+[NPTEL Deep Learning - part 1 (recommended, very under-rated)](https://www.youtube.com/playlist?list=PLyqSpQzTE6M9gCgajvQbc68Hk_JKGBAYT){:target="_blank"}
+
+[NPTEL Deep Learning - part 2 (recommended)](https://www.youtube.com/playlist?list=PLyqSpQzTE6M-_1jAqrFCsgCcuTYm_2urp){:target="_blank"}
+
 [Good short intro: (optional)](https://www.youtube.com/watch?v=FmpDIaiMIeA){:target="_blank"}
 
 [Long intro with TensorFlow & MNIST: (optional)](https://www.youtube.com/watch?v=vq2nnJ4g6N0){:target="_blank"}
 
 ## Future Plans
-My next target is to cover a. Segmentation, b. Action Recognition etc.
-
-I am also interested in covering Audio. I haven't decided the topic yet, there are many to choose from: Speech Recognition, Speaker Recognition, Music Generation, Noise Cancelling etc. Anyway, there is time to decide.
+My next target is to cover other papers on Object Detection like Yolo, SSD, RFCN, RetinaNet etc.
+Then I will cover a. Segmentation, b. Action Recognition etc.
 
 But as I said, I can continue creating, only if there is considerable [support](/donate) to this line of teaching.
 
