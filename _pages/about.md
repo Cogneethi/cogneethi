@@ -13,6 +13,7 @@ I have worked on the following:
 * Synthetic Face Generation using GANs (StyleGAN2 and a custom GAN).
 * Speaker Recognition/Diarization.
 * Speech to Text, Keyphrase Extraction and Sentence Similarity using NLP techniques.
+* Machine Learning for 3D data.
 
 I have worked on Images, Audio and Text. I can switch domains and get a deeper understanding of a topic and start working on it.
 I am currently looking for freelance/full-time/remote jobs.
@@ -32,9 +33,6 @@ If you found this tutorial useful, help me reach out to more people. You can do 
 * Share on Twitter and tag [@cogneethi](https://twitter.com/cogneethi){:target="_blank"}
 * Share on Social - LinkedIn/Quora/Reddit etc
 * Tell your friends - WhatsApp/iMessage/Messenger/WeChat/Line/Telegram etc.
-
-### Your support
-If there is considerable [support](/donate) for this kind of tutorials, I will continue making more on the same lines.
 
 ### Contact
 If you want to get in touch, or if you have any comments, suggestions or feedback, you can [contact me](/contact).
