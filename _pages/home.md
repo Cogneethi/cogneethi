@@ -9,16 +9,14 @@ excerpt: >
 ---
 
 Hi, I am Nikhil, a Machine Learning Engineer.
-I am currently Freelancing.
 Know more [about me](/about).
 
-I am in the process of getting a deeper understanding on Machine Learning.
 I have created video tutorials on topics related to Machine Learning.
-The first one is on [Object Detection](https://www.youtube.com/playlist?list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S){:target="_blank"}. There are more than 1000 subscirbers currently. I will be creating more during my spare time.
+The first one is on [Object Detection](https://www.youtube.com/playlist?list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S){:target="_blank"}. There are more than 5000 subscirbers currently. Since I have taken up a full time job, I may not be adding any more videos any time soon.
 
 There are many tutorials online that cover topics more broadly. For example, they might teach you CNNs, RNNs, GANs, RL etc. I would consider these to be the *meta concepts* or the basic building blocks with which you can build higher level stuff. These tutorials are already good and there is no point repeating them.
 
-My intention is to pick a domain and cover all the important topics in that domain. Irrespective of what *meta concept* they might be using.
+My intention was to pick a domain and cover all the important topics in that domain. Irrespective of what *meta concept* they might be using.
 
 ## 1. Evolution of Object Detection Networks
 Topic on Object Detection.
@@ -89,10 +87,4 @@ If you are interested in the basics of Machine Learning, you can go through thes
 
 [Long intro with TensorFlow & MNIST: (optional)](https://www.youtube.com/watch?v=vq2nnJ4g6N0){:target="_blank"}
 
-## Future Plans
-My next target is to cover other papers on Object Detection like Yolo, SSD, RFCN, RetinaNet etc.
-Then I will cover a. Segmentation, b. Action Recognition etc.
-
-But as I said, I can continue creating, only if there is considerable [support](/donate) to this line of teaching.
-
-**I grossly underestimated the amount of time it would take to create video courses.** I initially thought, it would just take 1 or 1.5 months, but actually I ended up taking more than 6 months, full-time. Off course, next time it would take less, since I have already learnt few things from my mistakes and the foundation is set. Nevertheless, I realised, Video/Audio recording is not for the faint hearted!
+**I grossly underestimated the amount of time it would take to create video courses.** I initially thought, it would just take 1 or 1.5 months, but actually I ended up taking more than 6 months, full-time. I realised, Video/Audio recording is not for the faint hearted!
