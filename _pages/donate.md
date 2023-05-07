@@ -4,6 +4,11 @@ title: "Donate"
 excerpt: "Support Me."
 ---
 
+[Update]: I have taken up a full time job. I have enough money to pay my bills.
+I no longer need any more donations. Thank you for your support.
+But I am leaving this page below as it is.
+
+[Old Page]
 If you like this tutorial, please consider supporting me via any of:
 
 - PayPal: [https://paypal.me/nikhiltiru](https://paypal.me/nikhiltiru){:target="_blank"}
@@ -23,10 +28,6 @@ If you like this tutorial, please consider supporting me via any of:
   <figure>
   	<a href="/assets/images/upi_qr_small_wallets.png"><img src="/assets/images/upi_qr_small_wallets.png"></a>
   </figure>
-
-
-I am planning to add a Wall of Fame page, where all my supporters will get a shout out.
-I would be glad to add your name to the list. So, do let me know the details of your donation [here](/contact).
 
 
 ---
